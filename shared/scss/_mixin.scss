@@ -1,0 +1,209 @@
+@charset "utf-8";
+
+@import "variable";
+
+// breakpoint
+//----------------------------
+@mixin bpPC{
+  @media print, screen and (min-width: $breakpoint-sp) { @content; }
+}
+@mixin bpSP{
+  @media only screen and (max-width: $breakpoint-sp - 1px) { @content; }
+}
+@mixin bpTablet{
+  @media print, screen and (min-width: $breakpoint-sp) and (max-width: $breakpoint-tablet - 1px) { @content; }
+}
+@mixin bpTabletPC{
+  @media print, screen and (min-width: $breakpoint-tablet) { @content; }
+}
+@mixin bpTabletSP{
+  @media only screen and (max-width: $breakpoint-tablet - 1px){ @content; }
+}
+
+// calc
+//----------------------------
+@function ratioCalc($size){
+  $rate: $size / 1200;
+  @return $rate * 100%;
+}
+
+
+// layout
+//----------------------------
+@mixin containerBase {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	// padding-right: 2%;
+	// padding-left: 2%;
+	@include bpPC {
+		max-width: 100%;
+	}
+}
+
+@mixin containerInner{
+  max-width:calc(#{$content-width} + 4%);
+  padding:0 2%;
+  margin:auto;
+}
+
+@mixin flexCenter(){
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+// column
+//----------------------------
+@mixin columnCalc($col, $margin){
+  li {
+    width: calc((100% - #{$margin} * 2) / #{$col});
+    margin-right:$margin;
+    + li:nth-child(#{$col}n + #{$col}){margin-right:0;}
+  }
+  @include bpSP{
+    
+  }
+}
+
+// transition
+//----------------------------
+@mixin transitionDefault{
+  transition: all .3s $transition-ease;
+}
+
+// hover
+//----------------------------
+@mixin hoverOpacity{
+  transition: all 0.5s;
+  &:hover{
+    text-decoration: none;
+    opacity: 0.75;
+  }
+}
+
+// focus
+//----------------------------
+@mixin focusStyle{
+  outline:3px solid palettes(blue,vivid);
+}
+
+
+// icon
+//----------------------------
+@mixin arrowMaker($size, $color, $direct){
+  content:'';
+  display:inline-block;
+  position:absolute;
+  top:50%;
+  // transform:translateY(-50%);
+  margin:auto;
+  width:$size;
+  height:$size;
+  border-top:$color 1px solid;
+  border-right: $color 1px solid;
+  @if $direct == top{
+    transform:translateY(-50%) rotate(-45deg);
+  } @else if $direct == left{
+    transform:translateY(-50%) rotate(-135deg);
+    left:20px;
+    margin:auto 0;
+  } @else if $direct == right{
+    transform:translateY(-50%) rotate(45deg);
+    right:20px;
+    margin:auto 0;
+  } @else if $direct == bottom{
+    transform:translateY(-50%) rotate(135deg);
+    bottom:20%;
+    margin:0 auto;
+  }
+}
+
+@mixin iconClose($size, $color){
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: $size;
+  height: $size;
+  opacity: 0.7;
+  transition:opacity .3s $transition-ease;
+  &:hover,&:focus {
+    opacity: 1;
+  }
+  &:before, &:after {
+    position: absolute;
+    left: 50%;
+    top:0;
+    content: ' ';
+    height: calc(#{$size} + 1px);
+    width: 2px;
+    background-color: $color;
+  }
+  &:before {transform: rotate(45deg);}
+  &:after {transform: rotate(-45deg);}
+}
+
+// iconfont
+//----------------------------
+@mixin iconFont{
+  font-family: 'svgicon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// button
+//----------------------------
+@mixin buttonReset(){
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  // outline: none;
+  padding: 0;
+  appearance: none;
+}
+
+// img
+//----------------------------
+@mixin centerImgBox{
+  position: relative;
+  height: 0;
+  padding-top: 62.7%;
+  overflow: hidden;
+  img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+// clearfix
+//----------------------------
+@mixin clearfix{
+  content:'';
+  display:block;
+  clear:both;
+  height:0;
+  overflow:hidden;
+}
+
+
+// current
+//----------------------------
+@mixin currentStyle{
+  content:'';
+  position:absolute;
+  bottom:0;
+  display:block;
+  width:100%;
+  height:6px;
+  background:palettes(blue,vivid);
+}
+

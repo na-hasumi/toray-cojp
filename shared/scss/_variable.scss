@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+// breakPoint
+//----------------------------
+$breakpoint-sp:768px;
+$breakpoint-tablet:960px;
+
+// layout
+//----------------------------
+$content-width:1200px;
+$content-width-narrow:1080px;
+$headerGnav-height-pc:150px;
+$headerGnav-height-pc-scrolled:110px;
+$headerGnav-height-sp:50px;
+$headerGnav-height-tablet:70px;
+
+// transition
+//----------------------------
+$transition-ease:cubic-bezier(0.170, 0.935, 0.305, 1.000);
+
+
+// color
+//----------------------------
+$palettes: (
+  blue: (
+    base: #004098,
+    vivid:#0089ff,
+    light: #eaeef4,
+    light2: #5A7296,
+    light3: #D8E0ED,
+    dark: rgba(19,51,95,.95),
+    dark2: #1D3A65,
+    gnavborder: #4C6EA2,
+  ),
+  black: (
+    base: #000,
+    light: lighten(#000, 30%),
+  ),
+  gray:(
+    base:#b2b2b2,
+    dark:#5d5d5d,
+    dark2:#707070,
+    dark3:#656C74,
+    light:#f4f4f4,
+    light2:#c4c4c4
+  ),
+  red:(
+    base: #c90000,
+    vivid: #ff3300
+  ),
+  border:(
+    base:#ccc
+  )
+);
+
+@function palettes($key, $tone: base) {
+  @return map-get( map-get($palettes, $key), $tone);
+}
+
+// Zindex
+$zindex: (
+    'modal': 1000
+);

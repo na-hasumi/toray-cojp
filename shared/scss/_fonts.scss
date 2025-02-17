@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+@import "variable";
+@import "mixin";
+
+/*===========================================
+_fonts.scss
+===========================================*/
+@font-face {
+  font-family: 'svgicon';
+  src:
+  url('../fonts/svgicon.woff?a8ryc2') format('woff'),
+    // url('../fonts/svgicon.ttf?a8ryc2') format('truetype'),
+    url('../fonts/svgicon.svg?a8ryc2#svgicon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body,select,input,textarea{
+  font-family: Helvetica, Arial, Tahoma, sans-serif;
+  font-size:1.6rem;
+  font-weight: 300;
+  line-height:1.8;
+  color:#333;
+  font-feature-settings: "pkna";
+  letter-spacing: .03em;
+}
+[lang="ja"] body,
+[lang="ja"] select,
+[lang="ja"] input,
+[lang="ja"] textarea{
+  font-family:'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3','Meiryo','メイリオ',sans-serif;
+}
+
+@media screen and (max-width:320px){
+  html{font-size:50%;}
+  body,select,input,textarea{line-height: 1.6;}
+}
+
+@include bpSP{
+  body,select,input,textarea{line-height: 1.6;}
+}
+
+
+// .icon-arrow:before {
+//   content: "\e90c";
+// }
+// .icon-triangle:before {
+//   content: "\e90b";
+// }
+// .icon-keyword_search:before {
+//   content: "\e909";
+// }
+// .icon-check:before {
+//   content: "\e90a";
+// }
+// .icon-mail:before {
+//   content: "\e900";
+// }
+// .icon-global:before {
+//   content: "\e901";
+// }
+// .icon-search:before {
+//   content: "\e906";
+// }
+// .icon-window:before {
+//   content: "\e907";
+// }
+// .icon-products_1:before {
+//   content: "\e902";
+// }
+// .icon-products_2:before {
+//   content: "\e903";
+// }
+// .icon-products_3:before {
+//   content: "\e904";
+// }
+// .icon-products_4:before {
+//   content: "\e905";
+// }
+// .icon-products_5:before {
+//   content: "\e908";
+// }

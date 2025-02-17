@@ -1,0 +1,220 @@
+﻿@charset 'UTF-8';
+/*===========================================
+keynote.css
+===========================================*/
+
+/* index
+--------------------------------*/
+#keynote{text-align: left;}
+#keynote .indexHeading{
+	padding:45px 0;
+	margin:0;
+	border:none;
+	font-size: 128%;
+	text-align: center;
+	color:#014099;
+}
+#keynote .indexHeading em{
+	display: block;
+	font-size:240%;
+}
+#keynote .ctoTop{
+	width:33%;
+	margin:0 auto 60px;
+	overflow:hidden;
+	font-weight: bold;
+}
+#keynote .ctoTop img{float:left; margin-right:12px;}
+#keynote .ctoTop em{display:block; margin-top:10px; font-size:157%;}
+
+	@media screen and (max-width:767px){
+		#keynote .indexHeading{padding:20px 0;}
+		#keynote .indexHeading em{font-size:141%;}
+		#keynote .ctoTop{width:80%; margin:0 auto 30px;}
+	}
+
+
+/* seriesList
+--------------------------------*/
+#keynote .seriesList{}
+#keynote .seriesList li{margin-top:10px;}
+#keynote .seriesList li.soon{opacity:0.3;}
+#keynote .seriesList li.soon a{cursor: default;}
+#keynote .seriesList li a{
+	display: table;
+	width:100%;
+	border-collapse: separate;
+	border-spacing: 1px;
+}
+#keynote .seriesList li a:hover{text-decoration: none; opacity:0.8;}
+#keynote .seriesList li span{
+	display:table-cell;
+	width:75px;
+	padding:10px;
+	text-align: center;
+	background-color:#014099; color:#fff;
+}
+#keynote .seriesList li em{
+	display:table-cell;
+	padding:10px;
+	background-color:#f5f6f7;
+	border:#6f6f70 1px solid;
+	font-size:;
+	font-weight: bold;
+	color:#000;
+}
+#keynote .seriesList.index{margin-top:15px;}
+#keynote .seriesList.index li a{border-spacing:2px;}
+#keynote .seriesList.index li span{width:13%; padding:20px 10px;font-size:160%;}
+#keynote .seriesList.index li em{padding:20px; font-size:160%;}
+
+	@media screen and (max-width:767px){
+		#keynote .seriesList li{margin:0;}
+		#keynote .seriesList li a{border-spacing: 1px!important;}
+		#keynote .seriesList li span{font-size:100%!important; width:20%!important; padding:10px 5px!important; vertical-align: middle!important;}
+		#keynote .seriesList li em{padding:10px!important; font-size:100%!important;}
+	}
+
+/* lowerHeading
+--------------------------------*/
+#keynote .lowerHeading{margin:30px 0;}
+#keynote .lowerHeading p:nth-child(1){color:#014099; font-size:85%;}
+#keynote .lowerHeading p:nth-child(2){color:#014099; font-weight: bold;}
+#keynote .lowerHeading p:nth-child(3) {
+	display: inline-block;
+	padding:1px 20px;
+	margin:10px 0;
+	color: #fff;
+	background-color: #014099;
+}
+#keynote .lowerHeading h1{
+	padding:0;
+	margin:0;
+	color:#000;
+	border:none;
+	font-size:228%;
+	line-height: 1.3;
+	text-align: left;
+}
+
+/* section
+--------------------------------*/
+#keynote section{overflow:hidden; margin:30px 0;}
+#keynote section h2{color:#000; margin-top:0;}
+#keynote section .main{float:left; width:70%;}
+#keynote section .side{float:right; width:25%;}
+#keynote section:nth-of-type(1){margin-top:-60px;}
+#keynote .main .hello{padding-top:70px;}
+#keynote .side dl{font-size:85%;}
+#keynote .side dt{color:#014099; margin:0 0 10px; font-weight: bold;}
+#keynote .side dd.zoomlink{margin:10px 0 0; text-align:right;}
+
+/* cto
+--------------------------------*/
+#keynote .cto{overflow:hidden;}
+#keynote .cto img{float:left; margin-right:10px; width: auto;}
+#keynote .cto span{display:block; font-size:85%;}
+#keynote .cto em{font-size:128%; font-weight: bold;}
+
+	@media screen and (max-width:767px){
+		#keynote .lowerHeading{margin:20px 0;}
+		#keynote .lowerHeading h1{font-size:157%;}
+		#keynote section{}
+		#keynote section .main{float:none; width:auto; margin-bottom:20px;}
+		#keynote section .side{float:none; width:auto; text-align:center;}
+		#keynote section:nth-of-type(1){margin:0;}
+		#keynote .main .hello{padding-top:0;}
+		#keynote .side dt{text-align: center}
+		#keynote .side dd.zoomlink{text-align:center;}
+		#keynote .side .cto{text-align: left;}
+	}
+
+/* modal
+--------------------------------*/
+#frameless .tclose {/*top:-50px; right:0;*/top:0 !important; right:-50px !important;}
+
+#frameOpen #contents{padding:0!important;}
+#keynoteModal{min-height: 700px;}
+#keynoteModal h1{
+	margin:0;
+	padding:20px;
+	text-align:center;
+	background-color:#014099;
+	color:#fff;
+	font-size:171%;
+	font-weight: bold;
+}
+#keynoteModal h1 span{
+	font-size:70%;
+}
+#keynoteModal .modalnote{
+	padding:20px 30px;
+	background-color:#014099;
+	color:#fff;
+	font-size:128%;
+}
+#keynoteModal .modalnote .reg{
+	margin-top:20px;
+	font-size:10px;
+	text-align:right;
+	color:#dad7d7;
+}
+#keynoteModal .modalnote .underline{
+	text-decoration: underline;
+}
+body.popup #content h1{text-align: left;}
+/*body.popup header{display:none;}*/
+
+	@media screen and (max-width:767px){
+		#keynoteModal{min-height: 0;}
+		#keynoteModal h1{margin-bottom:20px; padding:10px; font-size:128%;}
+		#keynoteModal h1 span{display:block;}
+		#keynoteModal .modalnote{margin-top:20px; padding:10px; font-size:100%;}
+	}
+
+
+/* custom
+--------------------------------*/
+#keynote.no2 .main .hello{padding-top:0;}
+#keynote.no2 section:nth-of-type(1){margin-top:0;}
+
+
+/*--------------------------------------------------
+merit technical
+--------------------------------------------------*/
+#movEffect{margin:30px auto;}
+#movEffect .movSet{position:relative;}
+#movEffect .movSet a{
+	display:block;
+	position:absolute;
+	width:317px;
+	height:327px;
+	top:0;
+}
+#movEffect .movSet a#mov1{left:0;}
+#movEffect .movSet a#mov2{left:323px;}
+#movEffect .movSet a#mov3{
+	left:0;
+	width:446px;
+	height:174px;
+	}
+#movEffect .movStart{display:none;}
+#movEffect ul{overflow:hidden; font-weight:bold; margin:0 0 8px -13px;}
+#movEffect ul.version{font-size:114%; margin-top:10px!important;}
+#movEffect ul li{float:left; width:320px; margin:0 0 0 12px; text-align:center;}
+#movEffect ul li:first-child{margin-left:0; color:#014099;}
+#movEffect ul li span{display:inline-block; padding:1px 20px; background-color:#fff100;}
+
+.movBtn{margin-top:20px;}
+.movBtn a{
+	display:block;
+	width:685px;
+	height:52px;
+	background:url(../images/002_btn.png) no-repeat;
+	text-indent:-9999px;
+}
+.movBtn a:hover{opacity:0.7;}
+
+@media screen and (max-width:767px){
+	#movEffect{display:none;}
+}

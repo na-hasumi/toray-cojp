@@ -1,0 +1,13 @@
+
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="footer/idle" transform="translate(-210.000000, -130.000000)">
+            <rect fill="#ffffff" x="0" y="0" width="1440" height="522"></rect>
+            <g id="Icon/twitter" transform="translate(210.000000, 130.000000)" fill="#000000">
+                <g id="footer-twitter">
+                    <path d="m10.57,9.72l3.8,5.44h-1.56l-3.1-4.44h0s-.46-.65-.46-.65l-3.63-5.19h1.56l2.93,4.18.46.65Zm9.44.28c0,5.52-4.48,10-10,10S0,15.52,0,10,4.48,0,10,0s10,4.48,10,10Zm-4.24,5.89l-4.66-6.79h0l4.29-4.98h-1.02l-3.72,4.33-2.97-4.33h-3.43l4.5,6.54-4.5,5.23h1.02l3.93-4.57,3.14,4.57h3.43Z" id="Twitter" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

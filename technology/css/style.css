@@ -1,0 +1,322 @@
+﻿@charset 'UTF-8';
+/*===========================================
+style.css for R&D
+===========================================*/
+
+/* imgColumn
+--------------------------------*/
+p.imgColumn{margin:30px 0 0;}
+p.imgColumn + .imgCap{margin:20px 0 30px;}
+
+/* lumpMix
+--------------------------------*/
+.lumpMix + .lumpMix{margin:30px 0 0;}
+.lumpMix .lumpEnd > .bl_headingLv2:nth-of-type(1){margin-top:0;}
+.lumpMix .img-cap{padding:13px 0 0;}
+.lumpMix .img-cap{text-align: left;}
+
+/* iconLink
+--------------------------------*/
+.iconLink .arrow02::before{
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-top: #014099 3px solid;
+  border-right: #014099 3px solid;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  margin: -3px 15px 0 0;
+  vertical-align: middle;
+}
+.iconLink .arrow02 a{color:#333; font-weight: bold;}
+
+
+/*--------------------------------------------------
+unique adjust
+--------------------------------------------------*/
+.tecAdjust1{padding:20px; border:1px solid #e2e2e2; margin-top:50px;}
+.adjustLab004{width:50%; margin:0 auto;}
+
+@media screen and (max-width:767px){
+  .adjustLab004{width:100%; margin:0 auto;}
+}
+
+
+/*--------------------------------------------------
+add new R&D
+--------------------------------------------------*/
+/* TOP
+--------------------------------*/
+
+/* Philosophy
+--------------------------------*/
+.kvTecChapter .bl_borderList{margin-top:60px;}
+
+@media screen and (max-width:767px){
+  .kvTecChapter .bl_borderList{margin-top:30px;}
+}
+
+
+
+/* lifeinnovation */
+section[class*="lifeinnovation"]{padding:30px; margin:47px 0 0;}
+section.lifeinnovation1{background-color: #ffeadd;}
+section.lifeinnovation2{background-color: #ecf3f8;}
+section[class*="lifeinnovation"] .bl_headingLv2:nth-of-type(1){margin-top:0;}
+
+/* future */
+.futureAdjust1{
+  margin:0 0 30px;
+  padding:30px;
+  background-color: #eee;
+}
+.futureAdjust1 .box{
+  margin:10px 0 50px;
+  padding:20px;
+  background-color:#ddd;
+  position: relative;
+  text-align: center;
+}
+.futureAdjust1 .box::after{
+  left: 20px;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border: 20px solid transparent;
+  border-top: 20px solid #666;
+  position: absolute;
+  bottom: -60px;
+  left: 0;
+  right:0;
+  margin: auto;
+  content: "";
+  vertical-align: middle;
+}
+
+@media screen and (max-width:767px){
+  section[class*="lifeinnovation"]{padding:30px 15px 15px; margin:30px -4% 0;}
+  .futureAdjust1{
+    margin:0 0 20px;
+    padding:15px;
+  }
+  .futureAdjust1 .box{
+    margin:10px 0 40px;
+    padding:10px;
+    text-align: left;
+  }
+  .futureAdjust1 .box::after{bottom:-50px;}
+  .futureAdjust1 .alignC{text-align: left!important;}
+}
+
+
+/* squareList
+--------------------------------*/
+.squareList{margin:30px 0 10px;}
+.squareList li{font-weight: bold;}
+
+@media screen and (min-width:768px){
+  .squareList{width:60%;}
+  .squareList.fluid li{float:left;}
+  .squareList.fluid li:nth-of-type(odd){width:45%;}
+}
+
+
+/* orderAdjust
+--------------------------------*/
+@media screen and (max-width:767px){
+  .lumpMix.orderAdjust{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .lumpMix.orderAdjust [data-order="1"]{-webkit-box-ordinal-group: 2;-ms-flex-order: 1;order: 1;}
+  .lumpMix.orderAdjust [data-order="2"]{-webkit-box-ordinal-group: 3;-ms-flex-order: 2;order: 2; margin:20px 0 0;}
+  .lumpMix.orderAdjust [data-order="3"]{-webkit-box-ordinal-group: 4;-ms-flex-order: 3;order: 3; margin:20px 0 0;}
+  .lumpMix.orderAdjust [data-order="4"]{-webkit-box-ordinal-group: 5;-ms-flex-order: 4;order: 4; margin:20px 0 0;}
+  .lumpMix.orderAdjust [data-order="5"]{-webkit-box-ordinal-group: 6;-ms-flex-order: 5;order: 5; margin:20px 0 0;}
+}
+
+
+/* organization
+--------------------------------*/
+/* policy */
+.mapMarker *{box-sizing: border-box;}
+.mapMarker{
+  margin:0 0 30px;
+  overflow: hidden;
+}
+.mapMarker li{
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+.mapMarker li + li{margin-left:30px;}
+.mapMarker li::before{
+  content:'';
+  display: inline-block;
+  margin: 3px 7px 0 0;
+  width:16px;
+  height:16px;
+  border-radius: 50%;
+}
+.mapMarker li:nth-of-type(1)::before{background-color:#33a766;}
+.mapMarker li:nth-of-type(2)::before{background-color:#31b0dd;}
+.mapMarker li:nth-of-type(3)::before{background-color:#dd7f28;}
+.mapMarker li:nth-of-type(4)::before{background-color:#8d80b6;}
+
+  @media screen and (max-width:767px){
+    .mapMarker li{display:block;}
+    .mapMarker li + li{margin-left:0;}
+  }
+
+
+
+
+/*--------------------------------------------------
+keynoteBnr
+--------------------------------------------------*/
+#keynoteBnr{
+  display: block;
+  overflow:hidden;
+  height: auto;
+  background-color: #014099;
+  border:#014099 1px solid;
+  color:#fff;
+}
+#keynoteBnr:hover{
+  text-decoration: none;
+  opacity:0.8;
+}
+#keynoteBnr h3{
+  display:inline-block;
+  padding:30px 10px 0 30px;
+  font-size:24px;
+  line-height: 1.3;
+}
+#keynoteBnr h3 em{
+  display:block;
+  font-size:48px;
+  font-weight: bold;
+}
+#keynoteBnr span{
+  display:inline-block;
+  padding:5px 30px;
+  border:#fff 1px solid;
+  margin-left:20px;
+  vertical-align: text-bottom;
+}
+#keynoteBnr p{float: right;}
+
+  @media screen and (max-width:767px){
+    #keynoteBnr{margin:40px 0 0; height: auto;}
+    #keynoteBnr h3{display:block; padding:10px; font-size:14px; text-align: center;}
+    #keynoteBnr h3 em{font-size:22px;}
+    #keynoteBnr span{display: block; width:50%; text-align: center; margin:0 auto 10px;}
+    #keynoteBnr p{display: block; float: none; background-color:#fff; text-align: center;}
+    #keynoteBnr p img{width:100px !important; height: 65px;}
+  }
+
+
+/*--------------------------------------------------
+researchBlock
+--------------------------------------------------*/
+.researchBlock{margin-top:50px;}
+.researchBlock .cardImg{
+  position:relative;
+  padding-bottom:0!important;
+}
+.researchBlock .cardImg img{width:100%;}
+.researchBlock .cardImg figcaption{
+  display:block;
+  position:absolute;
+  bottom:0;
+  padding:20px 5px;
+  width:100%;
+  box-sizing: border-box;
+  background:rgba(255,255,255,0.6);
+  font-size:1.8rem;
+  font-weight:bold;
+  text-align:center;
+  line-height:1.3;
+}
+.researchBlock .cardImg figcaption.multiple{padding:8px;}
+
+
+@media screen and (max-width:767px){
+  .researchBlock .cardImg figcaption{width:100%;}
+}
+
+#contents p.thumb img { width: auto; }
+.imgColumn2List li img { width: 100%; }
+#contents .ctoTop p img { width: auto; }
+
+@media print{
+  #main .researchBlock .cardImg{width:43%;}
+}
+
+
+
+/*--------------------------------------------------
+lowerLinkIndex
+--------------------------------------------------*/
+.lowerLinkIndex{margin:30px 0 0;}
+.lowerLinkIndex li a{
+  display: block;
+  background-color: #eef4f9;
+  padding:20px 30px;
+  color:#333;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+  transition: all .3s cubic-bezier(0.170, 0.935, 0.305, 1.000);
+}
+.lowerLinkIndex li a:hover{
+  background-color: #dbe3ea;
+}
+.lowerLinkIndex li a::before{
+  content:'';
+  display:inline-block;
+  width:8px;
+  height:8px;
+  border-top:#014099 3px solid;
+  border-right: #014099 3px solid;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  margin: -2px 13px 0 0;
+  vertical-align: middle;
+}
+
+
+@media screen and (min-width:768px){
+  .lowerLinkIndex{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .lowerLinkIndex li{
+    width: calc((100% - 4%) / 3);
+    margin-bottom: 2%;
+  }
+  .lowerLinkIndex li:not(:nth-child(3n+1)){margin-left:2%;}
+}
+
+@media screen and (max-width:767px){
+  .lowerLinkIndex li a{padding:10px; font-size:1.6rem;}
+  .lowerLinkIndex li a::before{
+    width:6px;
+    height:6px;
+    border-top-width:2px;
+    border-right-width:2px;
+  }
+  .lowerLinkIndex li + li{margin:5px 0 0;}
+
+}

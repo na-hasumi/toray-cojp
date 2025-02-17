@@ -1,0 +1,52 @@
+@charset "UTF-8";
+/*===========================================
+print.css
+===========================================*/
+@media print{
+  html{font-size:50%;}
+  body{width:100%;}
+  .ly_mainContents{
+    padding-top:0!important;
+    #main{width:100%;}
+    .ly_container{width:100%; padding:0;}
+    .ly_container .ly_inner{width:100%;}
+  }
+  
+  .ly_header .headerToolDialog,
+  .ly_header .funcBtns,
+  .ly_header .siteFunctions,
+  .ly_mainContents #sidebar,
+  .ly_globalNav,
+  .ly_localNav,
+  .breadCrumb,
+  .pagetop,
+  .ly_footer .footLinks,
+  .ly_footer .sns{display:none!important;}
+
+  .ly_header{
+    width:auto;
+    height: 70px!important;
+    position:relative!important;
+    margin: 0!important;
+    padding-bottom:10px!important;
+    border-bottom:#ccc 1px solid!important;
+    .logo{
+      position:relative;
+      left:0;
+      top:0;
+      .groupLogo img{width:130px!important;}
+      .siteLogo{padding: 5px 0 0 15px!important;}
+      .siteLogo img{width: 70%!important;}
+    }
+  }
+
+  .ly_footer{
+    padding-top:0;
+  }
+
+  .bl_headingLv1{
+    font-size:30px;
+  }
+
+  h1,h2,h3,h4,h5,h6 { page-break-after:avoid; }
+}

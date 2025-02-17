@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+/*--------------------------------------------------
+modal.css
+--------------------------------------------------*/
+#frameOpen header,
+#frameOpen #siteFunctions,
+#frameOpen #breadCrumb,
+#frameOpen footer,
+#frameOpen #globalNav,
+#frameOpen .pagetop{display:none!important;}
+#frameOpen #wrapper{width:880px!important;}
+#frameOpen #contents{padding:30px;}
+
+#directOpen header,
+#directOpen #breadCrumb,
+#directOpen footer{display:block;}
+
