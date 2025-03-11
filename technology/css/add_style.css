@@ -1197,7 +1197,7 @@ animation: spin 1s linear infinite;
             gap: 8px;
         }
 
-        .global &{
+        .global &,.collaborating &{
             grid-template-columns: repeat(3, 1fr);
 
             
@@ -1206,7 +1206,7 @@ animation: spin 1s linear infinite;
             }
         }
 
-        .technology &{
+        .technology &,.departments &{
             grid-template-columns: repeat(4, 1fr);
 
             
@@ -1486,7 +1486,7 @@ animation: spin 1s linear infinite;
         right: 0;
         width: 100%;
         margin: auto;
-        max-width: 730px;
+        max-width: 745px;
         z-index: 3;
         
         @media only screen and (max-width: 767px) {
