@@ -40,6 +40,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="/shared/js/jquery-3.5.1.min.js"></script>
 <link rel="stylesheet" href="/technology/css/style.css">
 <link rel="stylesheet" href="/technology/css/add_style.css">
+<link rel="stylesheet" href="/news/css/news.css">
 </head>
 
 <body>
@@ -73,7 +74,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <li><a href="/">HOME</a></li>
             <li><a href="/technology/">研究・技術開発</a></li>
             <li><a href="../">研究・技術開発体制</a></li>
-            <li><a href="./">研究組織</a></li>
             <li>電子情報材料研究所</li>
           </ul>
         </div>
@@ -105,7 +105,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <img class="lazyload" data-src="images/lab_005_01.webp" alt="" width="600" height="400">
           </figure>
           <div class="un_catchcopy_txtbox">
-            <h3 class="un_catchcopy_ttl">電子情報材料研究所は、情報通信分野でのソリューション提供に向けた材料・技術の中心的な研究拠点です。</h3>
+            <h3 class="un_catchcopy_ttl">感光性材料、微粒子分散、光機能分子といった要素技術に基づく研究・開発により、半導体、ディスプレイ、印刷分野へ材料ソリューションを提供します。</h3>
             <p class="un_catchcopy_txt">電子情報材料研究所は1987年に設立され、半導体・実装関連材料、ディスプレイ関連材料、印刷関連材料、および、次世代光通信やメディカルエレクトロニクスなどの新分野において、材料・技術を研究しています。高耐熱性および光機能性高分子や有機光エレクトロニクス材料の設計合成、フォトリソグラフィーなどを用いた微細加工、ナノ微粒子分散による高機能化、真空やウェットコーティングを用いた薄膜形成など世界屈指の技術を基に、先端材料・技術の創出に挑戦しています。</p>
           </div>
         </div>
@@ -173,6 +173,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </a>
             </li>
           </ul>
+        </div>
+
+        <h3 class="tec_ttl un_main_ttl">関連ニュース</h3>
+        <div class="un_news">
+          <form id="dataFilterForm" action="">
+            <!-- APIリクエスト設定 -->
+            <input type="hidden" id="js_getCreateType" value="list">
+            <input type="hidden" id="js_limit" value="3">
+            <input type="hidden" id="js_setFilter" data-type="index">
+            <input type="hidden" class="initParam" name="language" value="JA" checked>
+            <input type="hidden" class="initParam" name="region" value="JAPAN" checked>
+            <!-- <input type="hidden" class="initParam" name="newsCategory" value="press" checked> -->
+            <input type="hidden" class="initParam" name="newsTag" value="r_and_d" checked>
+            <div id="dataListBody" class="bl_cardUnit -col4 -newslist -nothumb">
+              <!-- === ここにAPIレスポンスが書き出されます ===-->
+            </div>
+            <!-- loading -->
+            <div class="bl_loading" id="js_newsloading" role="presentation" aria-hidden="true">
+              <div class="cv-spinner">
+                <span class="spinner"></span>
+              </div>
+            </div>
+            <!-- /loading -->
+          </form>
         </div>
 
         <h3 class="tec_ttl un_main_ttl">研究者情報</h3>
@@ -245,9 +269,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/microcms-js-sdk@latest/dist/umd/microcms-js-sdk.js"></script>
 <script src="/shared/js/plugins.js"></script>
 <script src="/shared/js/base.js"></script>
 <script src="/technology/js/organization.js"></script>
+<script src="/news/js/news.js"></script>
 
 
 </body>

@@ -1206,7 +1206,7 @@ animation: spin 1s linear infinite;
             }
         }
 
-        .technology &,.departments &{
+        .technology &,.departments &,.departments_engineering &{
             grid-template-columns: repeat(4, 1fr);
 
             
@@ -1369,6 +1369,34 @@ animation: spin 1s linear infinite;
         }
     }
 
+    .un_results_banner{
+        margin-top: 80px;
+
+        @media only screen and (max-width: 767px) {
+            margin-top: 40px;
+        }
+
+        a{
+            display: block;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            overflow: hidden;
+
+            img{
+                transition: all 0.3s ease;
+                width: 100%;
+            }
+
+            &:hover{
+                opacity: 0.8;
+                img{
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+
+
     .un_results_link{
         color: #004098;
         font-weight: bold;
@@ -1387,6 +1415,17 @@ animation: spin 1s linear infinite;
 
     .un_results_note{
         font-size: 1.2rem;
+    }
+
+    .un_news{
+        margin-bottom: 160px;
+        padding: 40px 47px 20px;
+        background-color: #EFF4FA;
+
+        @media only screen and (max-width: 767px) {
+            margin-bottom: 90px;
+            padding: 40px 20px 20px;
+        }
     }
 
     .un_info{
@@ -1609,6 +1648,10 @@ animation: spin 1s linear infinite;
         @media only screen and (max-width: 767px) {
             padding: 0 10px 25px;
             gap: 7px 2px;
+        }
+
+        .departments_engineering &{
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 
@@ -1963,6 +2006,7 @@ animation: spin 1s linear infinite;
 
                     @media only screen and (max-width: 767px) {
                         position: static;
+                        padding: 0;
                     }
                 }
             }

@@ -40,6 +40,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="/shared/js/jquery-3.5.1.min.js"></script>
 <link rel="stylesheet" href="/technology/css/style.css">
 <link rel="stylesheet" href="/technology/css/add_style.css">
+<link rel="stylesheet" href="/news/css/news.css">
 </head>
 
 <body>
@@ -73,7 +74,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <li><a href="/">HOME</a></li>
             <li><a href="/technology/">研究・技術開発</a></li>
             <li><a href="../">研究・技術開発体制</a></li>
-            <li><a href="./">研究組織</a></li>
             <li>医薬研究所</li>
           </ul>
         </div>
@@ -105,7 +105,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <img class="lazyload" data-src="images/lab_007_01.webp" alt="" width="600" height="400">
           </figure>
           <div class="un_catchcopy_txtbox">
-            <h3 class="un_catchcopy_ttl">東レの強み・技術力を活かし、オープンイノベーションとパートナーシップによって創薬を加速し、一日でも早く患者様に治療薬を届けます。</h3>
+            <h3 class="un_catchcopy_ttl">半世紀に亘る創薬研究で培った技術と東レの材料技術を融合し、オープンイノベーションとパートナーシップによって創薬を加速し、患者様に一日も早く治療薬を届けます。</h3>
             <p class="un_catchcopy_txt">東レは、これまでにフエロン<sup>®</sup>（1985年上市）、ドルナー<sup>®</sup>（1992年上市）、レミッチ<sup>®</sup>（2009年上市）といった革新的新薬を世界に先駆けて創出してきました。それら創薬研究・開発の過程で蓄積、育成してきた技術と経験、そして東レの総合力を強みとして活かし、アンメットメディカルニーズに粘り強く挑戦する「東レらしい創薬」に取り組むとともに、ライフイノベーション分野及び材料分野の技術課題の解決にも取り組んでいます。<br>
               （レミッチ<sup>®</sup>は鳥居薬品㈱の登録商標です。）
               </p>
@@ -178,6 +178,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </ul>
         </div>
 
+        <h3 class="tec_ttl un_main_ttl">関連ニュース</h3>
+        <div class="un_news">
+          <form id="dataFilterForm" action="">
+            <!-- APIリクエスト設定 -->
+            <input type="hidden" id="js_getCreateType" value="list">
+            <input type="hidden" id="js_limit" value="3">
+            <input type="hidden" id="js_setFilter" data-type="index">
+            <input type="hidden" class="initParam" name="language" value="JA" checked>
+            <input type="hidden" class="initParam" name="region" value="JAPAN" checked>
+            <!-- <input type="hidden" class="initParam" name="newsCategory" value="press" checked> -->
+            <input type="hidden" class="initParam" name="newsTag" value="r_and_d" checked>
+            <div id="dataListBody" class="bl_cardUnit -col4 -newslist -nothumb">
+              <!-- === ここにAPIレスポンスが書き出されます ===-->
+            </div>
+            <!-- loading -->
+            <div class="bl_loading" id="js_newsloading" role="presentation" aria-hidden="true">
+              <div class="cv-spinner">
+                <span class="spinner"></span>
+              </div>
+            </div>
+            <!-- /loading -->
+          </form>
+        </div>
+
         <h3 class="tec_ttl un_main_ttl">研究者情報</h3>
         <div class="un_info">
           <ul class="un_info_list">
@@ -248,10 +272,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/microcms-js-sdk@latest/dist/umd/microcms-js-sdk.js"></script>
 <script src="/shared/js/plugins.js"></script>
 <script src="/shared/js/base.js"></script>
 <script src="/technology/js/organization.js"></script>
-
+<script src="/news/js/news.js"></script>
 
 </body>
 </html>

@@ -40,6 +40,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="/shared/js/jquery-3.5.1.min.js"></script>
 <link rel="stylesheet" href="/technology/css/style.css">
 <link rel="stylesheet" href="/technology/css/add_style.css">
+<link rel="stylesheet" href="/news/css/news.css">
 </head>
 
 <body>
@@ -73,7 +74,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <li><a href="/">HOME</a></li>
             <li><a href="/technology/">研究・技術開発</a></li>
             <li><a href="../">研究・技術開発体制</a></li>
-            <li><a href="./">研究組織</a></li>
             <li>化成品研究所</li>
           </ul>
         </div>
@@ -105,7 +105,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <img class="lazyload" data-src="images/lab_003_01.webp" alt="" width="600" height="400">
           </figure>
           <div class="un_catchcopy_txtbox">
-            <h3 class="un_catchcopy_ttl">化成品研究所は、ケミカル製品やポリマー製品の研究を通じ、GXや次世代モビリティの材料創出に取り組んでいます。</h3>
+            <h3 class="un_catchcopy_ttl">重合・ポリマーアロイ技術をベースとしたポリマー高機能化技術、革新プロセス技術により、モビリティの変革を捉えた機能性材料や環境配慮型素材を創出・提供します。</h3>
             <p class="un_catchcopy_txt">化成品研究所は、東レのケミカル製品やポリマー製品の研究・技術開発の最も基盤となる役割を担っており、持続可能な循環型社会の実現に向けグリーントランスフォーメーション(GX)に対応した技術や材料、次世代モビリティの革新に貢献するキー材料の創出を目指し、有機化学・高分子化学をベースとした新規ケミカルやポリマーの開発、ポリマーをナノレベルで制御するナノテクノロジー“ナノアロイ”による素材の飛躍的な高機能化、グリーンケミストリー・プロセス技術を駆使した新サステナブル製品の研究に取り組んでいます。</p>
           </div>
         </div>
@@ -153,6 +153,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </a>
             </li>
           </ul>
+        </div>
+
+        <h3 class="tec_ttl un_main_ttl">関連ニュース</h3>
+        <div class="un_news">
+          <form id="dataFilterForm" action="">
+            <!-- APIリクエスト設定 -->
+            <input type="hidden" id="js_getCreateType" value="list">
+            <input type="hidden" id="js_limit" value="3">
+            <input type="hidden" id="js_setFilter" data-type="index">
+            <input type="hidden" class="initParam" name="language" value="JA" checked>
+            <input type="hidden" class="initParam" name="region" value="JAPAN" checked>
+            <!-- <input type="hidden" class="initParam" name="newsCategory" value="press" checked> -->
+            <input type="hidden" class="initParam" name="newsTag" value="r_and_d" checked>
+            <div id="dataListBody" class="bl_cardUnit -col4 -newslist -nothumb">
+              <!-- === ここにAPIレスポンスが書き出されます ===-->
+            </div>
+            <!-- loading -->
+            <div class="bl_loading" id="js_newsloading" role="presentation" aria-hidden="true">
+              <div class="cv-spinner">
+                <span class="spinner"></span>
+              </div>
+            </div>
+            <!-- /loading -->
+          </form>
         </div>
 
         <h3 class="tec_ttl un_main_ttl">研究者情報</h3>
@@ -225,9 +249,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/microcms-js-sdk@latest/dist/umd/microcms-js-sdk.js"></script>
 <script src="/shared/js/plugins.js"></script>
 <script src="/shared/js/base.js"></script>
 <script src="/technology/js/organization.js"></script>
+<script src="/news/js/news.js"></script>
 
 </body>
 </html>

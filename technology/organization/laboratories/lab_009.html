@@ -40,6 +40,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="/shared/js/jquery-3.5.1.min.js"></script>
 <link rel="stylesheet" href="/technology/css/style.css">
 <link rel="stylesheet" href="/technology/css/add_style.css">
+<link rel="stylesheet" href="/news/css/news.css">
 </head>
 
 <body>
@@ -63,7 +64,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ===== /globalNav ====== -->
 
 <!-- ===== contents ====== -->
-
 <main class="ly_mainContents laboratories" id="organization">
   <div class="ly_container">
     <div class="un_mv">
@@ -74,7 +74,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <li><a href="/">HOME</a></li>
             <li><a href="/technology/">研究・技術開発</a></li>
             <li><a href="../">研究・技術開発体制</a></li>
-            <li><a href="./">研究組織</a></li>
             <li>先端材料研究所</li>
           </ul>
         </div>
@@ -106,7 +105,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <img class="lazyload" data-src="images/lab_009_01.webp" alt="" width="600" height="400">
           </figure>
           <div class="un_catchcopy_txtbox">
-            <h3 class="un_catchcopy_ttl">当社のコア技術である高分子化学を中心とした基礎研究力強化を図り、革新的な先端材料の継続的な創出を推進しています。</h3>
+            <h3 class="un_catchcopy_ttl">新エネルギー、先端医療分野を中心に、社会のパラダイムシフトを先導する次世代先端材料・システムの継続的な創出とそのための基礎材料研究を推進します。</h3>
             <p class="un_catchcopy_txt">先端材料研究所は、新たな製品を創造することを目的とした中央研究所からの流れを継ぐ研究所であり、2010年6月に設立されました。<br>
               新エネルギー材料研究室、医療システム研究室、デジタルマテリアルサイエンスグループから成り、当社が重点課題としているサステナビリティイノベーション事業・デジタルイノベーション事業への対応に代表される社会のパラダイムシフトを先導する次世代先端材料・システムの研究開発と、革新的な基幹素材を創出するための基礎材料研究を推進しています。<br>
               また、研究推進のため、海外も含めた産官学にまたがるグローバルな社外連携も強化しています。</p>
@@ -156,6 +155,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </a>
             </li>
           </ul>
+        </div>
+
+        <h3 class="tec_ttl un_main_ttl">関連ニュース</h3>
+        <div class="un_news">
+          <form id="dataFilterForm" action="">
+            <!-- APIリクエスト設定 -->
+            <input type="hidden" id="js_getCreateType" value="list">
+            <input type="hidden" id="js_limit" value="3">
+            <input type="hidden" id="js_setFilter" data-type="index">
+            <input type="hidden" class="initParam" name="language" value="JA" checked>
+            <input type="hidden" class="initParam" name="region" value="JAPAN" checked>
+            <!-- <input type="hidden" class="initParam" name="newsCategory" value="press" checked> -->
+            <input type="hidden" class="initParam" name="newsTag" value="r_and_d" checked>
+            <div id="dataListBody" class="bl_cardUnit -col4 -newslist -nothumb">
+              <!-- === ここにAPIレスポンスが書き出されます ===-->
+            </div>
+            <!-- loading -->
+            <div class="bl_loading" id="js_newsloading" role="presentation" aria-hidden="true">
+              <div class="cv-spinner">
+                <span class="spinner"></span>
+              </div>
+            </div>
+            <!-- /loading -->
+          </form>
         </div>
 
         <h3 class="tec_ttl un_main_ttl">研究者情報</h3>
@@ -228,10 +251,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/microcms-js-sdk@latest/dist/umd/microcms-js-sdk.js"></script>
 <script src="/shared/js/plugins.js"></script>
 <script src="/shared/js/base.js"></script>
 <script src="/technology/js/organization.js"></script>
-
+<script src="/news/js/news.js"></script>
 
 </body>
 </html>

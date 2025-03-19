@@ -40,6 +40,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="/shared/js/jquery-3.5.1.min.js"></script>
 <link rel="stylesheet" href="/technology/css/style.css">
 <link rel="stylesheet" href="/technology/css/add_style.css">
+<link rel="stylesheet" href="/news/css/news.css">
 </head>
 
 <body>
@@ -73,7 +74,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <li><a href="/">HOME</a></li>
             <li><a href="/technology/">研究・技術開発</a></li>
             <li><a href="../">研究・技術開発体制</a></li>
-            <li><a href="./">研究組織</a></li>
             <li>地球環境研究所</li>
           </ul>
         </div>
@@ -105,7 +105,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <img class="lazyload" data-src="images/lab_006_01.webp" alt="" width="600" height="400">
           </figure>
           <div class="un_catchcopy_txtbox">
-            <h3 class="un_catchcopy_ttl">サステナブル社会の実現に向け、高分子膜技術・ナノテクノロジーの深化により、水不足、食品・飲料精製、リチウム等の有価物回収、CO<sub>2</sub>削減の課題を解決する分離技術の研究を行っています。</h3>
+            <h3 class="un_catchcopy_ttl">高分子膜技術・ナノテクノロジーの深化により、水・食品・資源循環分野へ膜分離技術を展開し、CO<sub>2</sub>の削減、サステナブル社会の実現に貢献します。</h3>
             <p class="un_catchcopy_txt">地球環境研究所は、1991年に開設された地球環境研究室を前身とし、2002年に研究所として設置され、グローバル研究・開発拠点と連携し、現地の水事情、ニーズに合った研究・開発を進めてきた。近年は、食品、資源・エネルギー、半導体、医薬・医療分野に向けた分離膜研究にも注力し、ミクロからサブナノ領域に広がる高分子材料の高次構造の制御技術の極限追求、分離科学の深化、およびMIやAI等のDX技術活用により、革新的な分離技術・分離膜製品を創出しています。</p>
           </div>
         </div>
@@ -149,6 +149,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </a>
             </li>
           </ul>
+        </div>
+
+        <h3 class="tec_ttl un_main_ttl">関連ニュース</h3>
+        <div class="un_news">
+          <form id="dataFilterForm" action="">
+            <!-- APIリクエスト設定 -->
+            <input type="hidden" id="js_getCreateType" value="list">
+            <input type="hidden" id="js_limit" value="3">
+            <input type="hidden" id="js_setFilter" data-type="index">
+            <input type="hidden" class="initParam" name="language" value="JA" checked>
+            <input type="hidden" class="initParam" name="region" value="JAPAN" checked>
+            <!-- <input type="hidden" class="initParam" name="newsCategory" value="press" checked> -->
+            <input type="hidden" class="initParam" name="newsTag" value="r_and_d" checked>
+            <div id="dataListBody" class="bl_cardUnit -col4 -newslist -nothumb">
+              <!-- === ここにAPIレスポンスが書き出されます ===-->
+            </div>
+            <!-- loading -->
+            <div class="bl_loading" id="js_newsloading" role="presentation" aria-hidden="true">
+              <div class="cv-spinner">
+                <span class="spinner"></span>
+              </div>
+            </div>
+            <!-- /loading -->
+          </form>
         </div>
 
         <h3 class="tec_ttl un_main_ttl">研究者情報</h3>
@@ -221,10 +245,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/microcms-js-sdk@latest/dist/umd/microcms-js-sdk.js"></script>
 <script src="/shared/js/plugins.js"></script>
 <script src="/shared/js/base.js"></script>
 <script src="/technology/js/organization.js"></script>
-
+<script src="/news/js/news.js"></script>
 
 </body>
 </html>
