@@ -92,6 +92,7 @@ var MainComponent = MainComponent || {};
 
   MainComponent.localNav = function(){
     var path = location.pathname,
+        search = location.search,
         _current = 'is_current',
         $localNav = $('.ly_localNav'),
         $links = $localNav.find('a'),
@@ -105,7 +106,15 @@ var MainComponent = MainComponent || {};
     // current
     $links.each(function(){
       var $href = $(this).attr('href');
-      if(path === $href){
+      // パラメータ付きURLの特別処理
+      if(path === '/technology/library/' && search.match(/file=commendation_[^&]+/)) {
+        if($href === '/technology/library/?file=commendation_2025') { // 特定のパラメータ付きURLに一致する場合
+          $(this).addClass(_current);
+          $(this).parents('.parent').children('a').addClass(_current);
+          $(this).parents('.parent').find('.menuLv3').show();
+          $(this).parents('.menuLv4').show();
+        }
+      } else if(path === $href) { // 通常の一致判定（パラメータなしの場合）
         $(this).addClass(_current);
         $(this).parents('.parent').children('a').addClass(_current);
         $(this).parents('.parent').find('.menuLv3').show();

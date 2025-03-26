@@ -226,7 +226,7 @@ function createTable(data) {
 async function findAvailableYears(prefix) {
     const currentYear = new Date().getFullYear();
     const years = [];
-    const startYear = 2000; // 2000年から検索開始
+    const startYear = 2005; // 2005年から検索開始
 
     for (let year = currentYear; year >= startYear; year--) {
         const fileName = `${prefix}_${year}.csv`;
