@@ -2623,6 +2623,261 @@ animation: spin 1s linear infinite;
             }
         }
     }
+    &.brands{
+        .un_box{
+            padding: 130px 0 180px;
+            background: url(../rd-capability/images/brands_sec_bg_01_01.webp) no-repeat center top / 100% auto, #0E2646;
+
+            @media only screen and (max-width: 767px) {
+                padding: 60px 0;
+            }
+
+            .ly_inner{
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+
+            &.is_01{
+                .un_box_titbox_img{
+                    img{
+                        @media only screen and (max-width: 767px) {
+                            width: 106px;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+
+            &.is_02{
+                background: url(../rd-capability/images/brands_sec_bg_02_01.webp) no-repeat center top / 100% auto, #000000;
+
+                .un_box_technology{
+                    background: url(../rd-capability/images/brands_sec_bg_02_02.webp) no-repeat center top / 100% auto, #EAEEF4;
+                }
+
+                .un_box_titbox_img{
+
+                    @media only screen and (max-width: 767px) {
+                        margin: 60px 0;
+                    }
+
+                    img{
+                        @media only screen and (max-width: 767px) {
+                            width: 200px;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+            &.is_03{
+                padding: 130px 0 110px;
+                background: url(../rd-capability/images/brands_sec_bg_03_01.webp) no-repeat center top / 100% auto, #000000;
+
+                @media only screen and (max-width: 767px) {
+                    padding: 60px 0;
+                }
+
+                .un_box_titbox_img{
+                    img{
+                        @media only screen and (max-width: 767px) {
+                            width: 240px;
+                            height: auto;
+                        }
+                    }
+                }
+
+                .un_box_technology{
+                    background: url(../rd-capability/images/brands_sec_bg_03_02.webp) no-repeat center top / 100% auto, #EAEEF4;
+                }
+            }
+        }
+        .un_box_titbox{
+            margin-bottom: 80px;
+
+            @media only screen and (max-width: 767px) {
+                margin-bottom: 40px;
+            }
+        }
+        .un_box_titbox_ttl{
+            color: #FFF;
+            font-size: 2.4rem;
+            text-align: center;
+            font-weight: bold;
+
+            @media only screen and (max-width: 767px) {
+                font-size: 1.8rem;
+            }
+        }
+        .un_box_titbox_img{
+            margin: 30px 0 45px;
+            text-align: center;
+
+            @media only screen and (max-width: 767px) {
+                margin: 30px 0;
+            }
+        }
+        .un_box_titbox_txt{
+            max-width: 800px;
+            margin-inline: auto;
+            color: #FFF;
+        }
+        .un_box_technology{
+            padding: 60px 20px 80px;
+            background: url(../rd-capability/images/brands_sec_bg_01_02.webp) no-repeat center top / 100% auto, #EAEEF4;
+
+            @media only screen and (max-width: 767px) {
+                padding: 40px 20px;
+            }
+        }
+        .un_box_technology_inner,
+        .un_box_solution_inner{
+            max-width: 800px;
+            margin-inline: auto;
+        }
+        .un_box_technology_ttl,
+        .un_box_solution_ttl{
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 40px;
+            color:#004098;
+            text-align: center;
+            position: relative;
+
+            @media only screen and (max-width: 767px) {
+                margin-bottom: 30px;
+            }
+
+            &::before{
+                content: "";
+                position: absolute;
+                bottom: -5px;
+                width: 53px;
+                height: 2px;
+                background-color: #004098;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+        }
+        .un_box_technology_txt,
+        .un_box_solution_txt{
+            margin-bottom: 40px;
+            font-size: 2.4rem;
+            font-weight: bold;
+            text-align: center;
+
+            @media only screen and (max-width: 767px) {
+                margin-bottom:20px;
+                font-size: 1.8rem;
+                text-align: left;
+            }
+        }
+        .un_box_technology_img{
+            text-align: center;
+        }
+        .un_box_solution{
+            position: relative;
+            padding: 60px 20px 80px;
+            background: #FFF;
+
+            @media only screen and (max-width: 767px) {
+                padding: 40px 20px;
+            }
+
+            &::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                translate: 0 -50%;
+                margin: auto;
+                width: 26px;
+                height:38px;
+                background: url(../rd-capability/images/brands_arrow.webp) no-repeat center center / contain;
+            }
+        }
+        .un_box_solution_list{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            
+            @media only screen and (max-width: 767px) {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 30px;
+            }
+        }
+        .un_box_solution_list_img{
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .un_box_solution_list_ttl{
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-align: center;
+
+            @media only screen and (max-width: 767px) {
+                font-size: 1.6rem;
+            }
+        }
+        .un_box_solution_list_txt{
+            text-align: center;
+
+            @media only screen and (max-width: 767px) {
+                text-align: left;
+            }
+        }
+        .un_box_banner{
+            margin-top: 60px;
+
+            @media only screen and (max-width: 767px) {
+                margin-top: 40px;
+            }
+        }
+        .un_box_banner_ttl{
+            margin-bottom: 20px;
+            text-align: center;
+            color: #FFF;
+
+            @media only screen and (max-width: 767px) {
+                margin-bottom: 10px;
+            }
+        }
+        .un_box_banner_img{
+            text-align: center;
+
+            a{
+                overflow: hidden;
+                display: block;
+                max-width: 580px;
+                margin-inline: auto;
+                transition: all 0.3s ease;
+
+                &:hover{
+                    opacity: 0.8;
+
+                    img{
+                        transform: scale(1.2);
+                    }
+                }
+            }
+
+            img{
+                transition: all 0.3s ease;
+            }
+        }
+        .un_sec{
+            .ly_inner{
+                padding-top: 130px;
+                padding-bottom: 0;
+    
+                @media only screen and (max-width: 767px) {
+                    padding-top: 100px;
+                }
+            }
+        }
+    }
     &.history{
         .un_mv{
             .ly_inner{
