@@ -324,6 +324,7 @@ animation: spin 1s linear infinite;
         overflow: hidden;
         
         a{
+            display: block;
             position: relative;
             text-decoration: none;
 
