@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 prefix = fileParam.split('_')[0]; // article または commendation
                 const availableYears = await findAvailableYears(prefix);
                 if (availableYears.length === 0) {
-                    throw new Error('利用可能な年度が見つかりません');
+                    throw new Error('表示できるデータが見つかりませんでした。');
                 }
                 currentYear = availableYears[0];
             } else {
@@ -38,15 +38,29 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.error('エラー:', error);
         // エラーメッセージをユーザーに表示
         const tableContainer = document.getElementById('article-table');
-        tableContainer.innerHTML = `<div class="error-message">エラー: ${error.message}</div>`;
+        tableContainer.innerHTML = `<div class="error-message">${error.message}</div>`;
     }
 });
+
+// CSVファイルが実際に取得できたかを判定する
+// 本番環境では存在しないファイルへのリクエストが notfound.html へ302リダイレクトされ、
+// response.ok が true になってしまうため、最終URLの拡張子で判定する
+function isCSVResponse(response) {
+    if (!response.ok) {
+        return false;
+    }
+    try {
+        return new URL(response.url).pathname.toLowerCase().endsWith('.csv');
+    } catch (error) {
+        return false;
+    }
+}
 
 async function readCSV(filename) {
     try {
         const response = await fetch(`/technology/library/csv/${filename}`);
-        if (!response.ok) {
-            throw new Error(`CSVファイルの取得に失敗しました (${response.status})`);
+        if (!isCSVResponse(response)) {
+            throw new Error('該当年度のデータが見つかりませんでした。');
         }
         const csvText = await response.text();
         
@@ -232,7 +246,7 @@ async function findAvailableYears(prefix) {
         const fileName = `${prefix}_${year}.csv`;
         try {
             const response = await fetch(`/technology/library/csv/${fileName}`, { method: 'HEAD' });
-            if (response.ok) {
+            if (isCSVResponse(response)) {
                 years.push(year.toString());
             }
         } catch (error) {
@@ -339,7 +353,7 @@ async function loadAndDisplayData(prefix, currentYear) {
         // 利用可能な年度一覧を取得
         const availableYears = await findAvailableYears(prefix);
         if (availableYears.length === 0) {
-            throw new Error('利用可能な年度一覧が見つかりません');
+            throw new Error('表示できるデータが見つかりませんでした。');
         }
 
         // 最新の年度かどうかをチェック
@@ -381,7 +395,7 @@ async function loadAndDisplayData(prefix, currentYear) {
             } catch (error) {
                 console.error('エラー:', error);
                 const tableContainer = document.getElementById('article-table');
-                tableContainer.innerHTML = `<div class="error-message">エラー: ${error.message}</div>`;
+                tableContainer.innerHTML = `<div class="error-message">${error.message}</div>`;
             } finally {
                 hideLoading(); // ローディング終了
             }
@@ -391,7 +405,7 @@ async function loadAndDisplayData(prefix, currentYear) {
     } catch (error) {
         console.error('エラー:', error);
         const tableContainer = document.getElementById('article-table');
-        tableContainer.innerHTML = `<div class="error-message">エラー: ${error.message}</div>`;
+        tableContainer.innerHTML = `<div class="error-message">${error.message}</div>`;
     } finally {
         hideLoading(); // ローディング終了
     }
